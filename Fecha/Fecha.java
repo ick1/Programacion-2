@@ -1,4 +1,6 @@
-/* Clase */
+package Fecha;
+
+/* Fecha */
 public class Fecha {
     
     /* Atributos */

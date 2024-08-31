@@ -1,6 +1,6 @@
 package Fecha;
 
-/* Fecha */
+/* Clase */
 public class Fecha {
     
     /* Atributos */
@@ -32,32 +32,29 @@ public class Fecha {
     }
 
     public int diasMes(){
-        switch(month){
-            case 1,3,5,7,8,10,12 ->{
-                return 31; 
-            }
-            case 2 ->{
+        switch (month) {
+            case 4: case 6: case 9: case 11:
+                return 30;
+            case 2:
                 if(bisiesto()){
-                    return 29;
+                    return 29; 
                 } else {
-                    return 28; 
+                     return 28; 
                 }
-            }
-            case 4,6,9,11 ->{
-                return 30; 
-            }
+            default:
+                return 31;
         }
     }
 
     private void valida(){
         if(day<1 || day>31){
-            if(month<1 || month>12){
-                if(year<1900 || year>2050){ 
-                    year = 1900; 
-                }
-            month = 1; 
-            }
-        day = 1; 
+            day = 1;
+        }
+        if(month<1 || month>12){
+            month = 1;
+        } 
+        if(year<1900 || year>2050){ 
+            year = 1900; 
         }
     }
 }

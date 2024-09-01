@@ -28,7 +28,7 @@ public class Fecha {
     /* Metodos */
 
     public boolean bisiesto(){
-        return (year%4==0) && (year%100!=0) || (year%400==0); 
+        return (year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0); 
     }
 
     public int diasMes(){
@@ -62,8 +62,8 @@ public class Fecha {
     }
 
     private void valida(){
-        if(day<1 || day>31){
-            day = 1;
+        if(day<1 || day>diasMes(month)){
+            day = 1; 
         }
         if(month<1 || month>12){
             month = 1;
@@ -204,7 +204,49 @@ public class Fecha {
         System.out.println(n1 + " " + day + " de " + n2 + " de "+ year);
     }
 
-    public void fechaTras(int n){
-        
+    public void fechaTras(int n){ 
+        for(int i=0; i<n; i++){
+            day++; 
+            if(day > diasMes(month)){
+                month++;
+                day = 1;
+                if(month > 12){
+                    year++; 
+                    month = 1; 
+                    day = 1; 
+                }
+            }
+        }
+    }
+
+    public void siguiente(){
+        day++; 
+        if(day > diasMes(month)){
+            month++;
+            day = 1;
+            if(month > 12){
+                year++; 
+                month = 1; 
+                day = 1; 
+            }
+        }
+    }
+
+    public void anterior(){
+        day--;
+        if(day < 1){
+            month--; 
+            day = diasMes(month);
+            if(month < 1){
+                year--; 
+                month = 12; 
+                day = diasMes(12); 
+            } 
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Dia: "+day+"\nMes: "+month+"\nAño: "+year;
     }
 }

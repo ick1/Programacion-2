@@ -74,7 +74,6 @@ public class Principal {
         }while(true); 
     }
 
-
     public static void main(String[] args){
         iniciar(); 
         menu(f1); 

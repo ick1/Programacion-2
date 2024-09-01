@@ -62,25 +62,8 @@ public class Fecha {
     }
 
     private void valida(){
-        switch (month) {
-            case 4: case 6: case 9: case 11:
-                if(day<1 || day>30){
-                    day = 1; 
-                }
-            case 2:
-                if(bisiesto()){
-                    if(day<1 || day>29){
-                        day = 1; 
-                    } 
-                } else {
-                    if(day<1 || day>28){
-                        day = 1;
-                    }
-                }
-            default:
-                if(day<1 || day>31){
-                    day = 1; 
-                }
+        if(day<1 || day>31){
+            day = 1;
         }
         if(month<1 || month>12){
             month = 1;
@@ -222,6 +205,6 @@ public class Fecha {
     }
 
     public void fechaTras(int n){
-
+        
     }
 }

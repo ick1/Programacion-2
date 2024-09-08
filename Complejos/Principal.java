@@ -73,6 +73,5 @@ public class Principal {
         c2.setImaginaria(leer.nextDouble());
         
         menu(c1, c2);
-        
     }
 }

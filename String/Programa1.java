@@ -12,11 +12,11 @@ public class Programa1 {
         cadena = leer.nextLine().toLowerCase().trim();
 
         //Solicitar la subcadena a cambiar 
-        System.out.println("\nIndicar la palabra a remplazar: ");
+        System.out.println("\nIndicar la palabra u letra a remplazar: ");
         pal1 = leer.nextLine().toLowerCase().trim();
         
         //Solicitar la nueva subcadena
-        System.out.println("\nIndicar la nueva palabra a colocar: "); 
+        System.out.println("\nIndicar la nueva palabra u letra a colocar: "); 
         pal2 = leer.nextLine().toLowerCase().trim(); 
 
         //Remplazar la subcadena anterior con la nueva

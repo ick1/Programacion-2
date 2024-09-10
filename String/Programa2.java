@@ -8,14 +8,17 @@ public class Programa2 {
         String cadena, invertida="";     
         int i; 
         
+        //Solicitar cadena
         System.out.println("Favor de introducir una cadena: ");
-        cadena = in.nextLine(); 
+        cadena = in.nextLine().trim(); 
         
+        //Ciclo para invertir
         for(i=cadena.length()-1; i>=0; i--){
             invertida += cadena.charAt(i); 
         }
 
-        System.out.println("Cadena original: " + cadena);
+        //Impresion en pantalla
+        System.out.println("\nCadena original: " + cadena);
         System.out.println("Cadena invertida: " + invertida);
     }
 }

@@ -7,6 +7,7 @@ public class Materia {
     private int nE;
 
     public Materia(){
-        
+        nombre = "";
+        nrc = 0;
     }
 }

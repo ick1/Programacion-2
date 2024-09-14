@@ -43,7 +43,7 @@ public class Recta {
 
     @Override
     public String toString(){
-        return "La recta dada por " + p1 + " y " + p2 + " es " + pendiente() +
-                " x " + -1 + " y " + pendiente() + " = 0";
+        return "La recta que pasa por " + p1 + " y " + p2 + " es " + (p1.getY()-p2.getY()) +
+                "x" + " + " + (-1)*(p1.getX()-p2.getX()) +"y" + " + " +(-1)*((-1)*p1.getX()*p2.getY()+p1.getY()*p2.getX()) + " = 0";
     }
 }

@@ -56,6 +56,6 @@ public class Materia {
             cad += (i+1); 
             cad += estudiantes[i] + "\n";
         }
-        return nrc + "-" + nombre + cad; 
+        return nrc + " - " + nombre + "\n" + cad; 
     }
 }

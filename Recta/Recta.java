@@ -43,6 +43,7 @@ public class Recta {
 
     @Override
     public String toString(){
-        return "Punto p1: " + p1 + "\nPunto p2: " + p2 + "\nPendiente: " + pendiente();
+        return "La recta dada por " + p1 + " y " + p2 + " es " + pendiente() +
+                " x " + -1 + " y " + pendiente() + " = 0";
     }
 }

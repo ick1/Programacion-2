@@ -1,6 +1,7 @@
-package Recta;
+package Triangulo;
 
-import Punto.PuntoR2; 
+import Punto.PuntoR2;
+import Recta.Recta;
 
 public class Triangulo {
     private PuntoR2 p1;

@@ -1,4 +1,4 @@
-package Recta;
+package Triangulo;
 
 import Punto.PuntoR2;
 import java.util.Scanner; 
@@ -41,12 +41,12 @@ public class Principal {
             
             switch (opt){
                 case 1:{
-                    System.out.println("El area de la figura es " + t1.area());
+                    System.out.println("\nEl area de la figura es " + t1.area());
                     break;
                 }
                 
                 case 2:{
-                    System.out.println("El perimetro de la figura es " + t1.perimetro());
+                    System.out.println("\nEl perimetro de la figura es " + t1.perimetro());
                     break;
                 }
                 
@@ -55,12 +55,13 @@ public class Principal {
                     return;
                 }
                 default:{
-                    System.out.println("Opcion no valida");
+                    System.out.println("\nOpcion no valida");
                     break;
                 }
             }
         }while(true);
     }
+    
     public static void main(String[] args) {
         validar();
         menu();

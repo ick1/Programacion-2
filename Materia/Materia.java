@@ -40,12 +40,12 @@ public class Materia {
         nrc = n; 
     }
 
-    public setNE(int m){
+    public void setNE(int m){
         nE = m; 
     }
 
     public void agregar(Estudiante e){
-        estudiantes(nE++) = e; 
+        estudiantes[nE++] = e; 
     }
 
     @Override

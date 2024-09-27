@@ -80,7 +80,6 @@ public class Principal {
         lb = new Libro(nombre, editorial, pag); 
 
         do{
-            System.out.println("\n");
             System.out.println("  1. Agregar autor.");
             System.out.println("  2. Mostrar autor.");
             System.out.println("  3. Regresar.");
@@ -101,7 +100,7 @@ public class Principal {
                 }
                 case 3:{
                     l.add(lb); 
-                    System.out.println("Regresando...");
+                    System.out.println("Regresando ...");
                     return; 
                 }
                 default:{

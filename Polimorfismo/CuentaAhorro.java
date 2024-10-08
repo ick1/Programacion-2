@@ -1,17 +1,15 @@
 package Polimorfismo;
 
-import Cuenta.Cuenta;
-
 public class CuentaAhorro extends Cuenta {
     private double interes;
-    
-    public CuentaAhorro(int numero, String titular, double saldo, double interes){
-        super(numero, titular, saldo);
+
+    public CuentaAhorro(int numero, double interes){
+        super(numero);
         this.interes = interes;  
     }
 
     public void agregarIntereses(){
-        saldo += saldo * interes / 100; 
+       balance += balance * interes / 100; 
     }
 
     @Override

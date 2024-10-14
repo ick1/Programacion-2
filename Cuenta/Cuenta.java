@@ -5,9 +5,9 @@ public class Cuenta {
     /* Atributos */
     private int numdeCuenta; 
     private String titular; 
-    protected double saldo; 
+    private double saldo; 
     
-    /* Constructores */
+    /* Constructores */             
     
     /* Por defecto sin parámetros */
     public Cuenta(){ 

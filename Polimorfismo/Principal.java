@@ -31,7 +31,7 @@ public class Principal {
     
         C[cantidadCuentas] = new CuentaAhorro(numero, interes);
         System.out.println(C[cantidadCuentas]);
-        System.out.println("Cuenta creada exitosamente...");
+        System.out.println("Cuenta creada exitosamente...\n");
         cantidadCuentas++;  
     }
 
@@ -44,7 +44,7 @@ public class Principal {
 
         C[cantidadCuentas] = new CuentaCorriente(numero, limiteSobregiro); 
         System.out.println("\n" + C[cantidadCuentas]);
-        System.out.println("Cuenta creada exitosamente...");
+        System.out.println("Cuenta creada exitosamente...\n");
         cantidadCuentas++; 
     }
 
@@ -57,7 +57,7 @@ public class Principal {
 
         C[C.length - 1] = null; 
         cantidadCuentas--; 
-        System.out.println("La cuenta se ha eliminado exitosamente...");
+        System.out.println("La cuenta se ha eliminado exitosamente...\n");
     }
 
     public static void depositar(){
@@ -86,12 +86,13 @@ public class Principal {
         int i;
 
         if(cantidadCuentas == 0){
-            System.out.println("No existen cuentas");
+            System.out.println("No existen cuentas.\n");
         }
 
         for(i = 0; i < C.length; i++){
             if(C[i] != null){
-                System.out.println(C[i]);
+                System.out.println("Cuenta " + (i+1) + ":");
+                System.out.println(C[i] + "\n");
             }
         } 
     }
@@ -101,7 +102,7 @@ public class Principal {
             if(C[i] != null && C[i] instanceof CuentaAhorro){
                 ((CuentaAhorro)C[i]).agregarIntereses(); 
             } else if(C[i] != null && C[i] instanceof CuentaCorriente && C[i].getBalance() < 0) {
-                System.out.println("La cuenta " + C[i].getNoCuenta() + "esta sobregirada");
+                System.out.println("La cuenta " + C[i].getNoCuenta() + "esta sobregirada\n");
             }
         }
     }
@@ -117,13 +118,14 @@ public class Principal {
             case 'c':  
                 return; 
             default: 
-                System.out.println("Opcion no valida.");
+                System.out.println("Opcion no valida.\n");
         }
     }
 
     public static void menu(){
+        System.out.println("Bienvenido...");
         do{ 
-            System.out.println("\n  1. Crear cuenta.");
+            System.out.println("  1. Crear cuenta.");
             System.out.println("  2. Eliminar cuenta.");
             System.out.println("  3. Depositar.");
             System.out.println("  4. Retirar.");
@@ -133,7 +135,11 @@ public class Principal {
             System.out.print("\nSeleccionar una opcion: ");
             opc = leer.nextInt(); 
             switch(opc){
-                case 1: 
+                case 1:
+                    if(cantidadCuentas == 9){
+                        System.out.println("El numero de cuentas posibles esta completo.");
+                        break; 
+                    } 
                     System.out.println("\n  a. Cuenta Ahorros.");
                     System.out.println("  b. Cuenta Corriente.");
                     System.out.println("  c. Regresar.");
@@ -161,7 +167,7 @@ public class Principal {
                     System.out.println("Hasta pronto...");
                     return; 
                 default: 
-                    System.out.println("Opcion invalida");
+                    System.out.println("Opcion invalida.\n");
                     break; 
             }       
         } while(true); 
